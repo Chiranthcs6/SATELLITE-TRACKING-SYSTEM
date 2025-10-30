@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Details - Tracking System</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!-- Details page container -->
+    <div class="details-container">
+        <!-- Main content area -->
+        <main class="details-main">
+            <!-- Back button -->
+            <div class="schedule-header">
+                <button class="back-link" id="backBtn" data-testid="button-back">
+                    ← Back to Explore
+                </button>
+            </div>
+
+            <!-- Satellite header section -->
+            <div class="satellite-header-section">
+                <div class="satellite-name-with-badge">
+                    <h1 id="satelliteName" class="satellite-page-title">Loading...</h1>
+                    <span id="statusBadge" class="status-badge">Active</span>
+                </div>
+                <div id="satelliteMeta" class="satellite-meta-line">
+                    <!-- Satellite metadata will be populated here -->
+                </div>
+            </div>
+
+            <!-- Tab navigation -->
+            <div class="pass-tabs">
+                <button class="pass-tab active" data-tab="future" data-testid="tab-future-passes">
+                    🌍 Future Passes
+                </button>
+                <button class="pass-tab" data-tab="past" data-testid="tab-past-passes">
+                    📋 Past Passes
+                </button>
+            </div>
+
+            <!-- Future Passes Tab Content -->
+            <div class="tab-content active" data-content="future">
+                <h2 class="passes-section-title">🌍 Upcoming Passes</h2>
+                <div id="futurePasses" class="passes-container">
+                    <!-- Future passes will be populated here -->
+                </div>
+            </div>
+
+            <!-- Past Passes Tab Content -->
+            <div class="tab-content" data-content="past">
+                <h2 class="passes-section-title">📋 Past Passes</h2>
+                <div id="pastPasses" class="passes-container">
+                    <!-- Past passes will be populated here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include authentication and page scripts -->
+    <script src="../../js/auth.js"></script>
+    <script src="satelliteDetailsPage.js"></script>
+</body>
+</html>

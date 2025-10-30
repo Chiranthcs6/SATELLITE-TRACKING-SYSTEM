@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Observation - Tracking System</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!-- Pass Details page container -->
+    <div class="details-container">
+        <!-- Main content area -->
+        <main class="details-main">
+            <!-- Back button and title -->
+            <div class="schedule-header">
+                <button class="back-link" id="backBtn" data-testid="button-back">
+                    ← Schedule Observation
+                </button>
+            </div>
+
+            <!-- Pass Details Section -->
+            <div class="schedule-card">
+                <h2 class="schedule-section-title">🌍 Pass Details</h2>
+                
+                <div id="passDetailsForm" class="pass-details-form">
+                    <!-- Pass details will be populated here -->
+                </div>
+                
+                <button class="btn-confirm-schedule" data-testid="button-confirm">
+                    📅 Confirm Schedule
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include authentication and page scripts -->
+    <script src="../../js/auth.js"></script>
+    <script src="passDetailsPage.js"></script>
+</body>
+</html>

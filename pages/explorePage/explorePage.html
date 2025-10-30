@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Explorer - Tracking System</title>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    
+</head>
+<body>
+    <!-- Explore page container -->
+    <div class="explore-container">
+        <!-- Header with navigation and controls -->
+        <header class="explore-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="header-title">Satellite Explorer</h1>
+                    <p class="header-subtitle" id="satelliteCount">Loading satellites...</p>
+                </div>
+                <div class="header-right">
+                    <span class="user-info" id="userInfo">Welcome, <span id="currentUser">User</span></span>
+                    <!-- Admin-only Requests button -->
+                    <button class="btn primary" id="requestsBtn" data-testid="button-requests" style="display: none;">
+                        Requests
+                    </button>
+                    <button class="btn destructive" id="logoutBtn" data-testid="button-logout">
+                        Logout
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search functionality -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search satellites by name or NORAD ID..." 
+                    data-testid="input-search"
+                >
+            </div>
+        </header>
+
+        <!-- Main content area for satellite grid -->
+        <main class="explore-main">
+            <div class="satellite-grid" id="satelliteGrid">
+                <!-- Satellite cards will be dynamically populated here -->
+            </div>
+            
+            <!-- No results message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>No satellites found matching your search.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Admin Requests Modal (hidden by default) -->
+    <div class="requests-modal" id="requestsModal" style="display: none;">
+        <div class="requests-modal-content">
+            <div class="requests-header">
+                <h2>User Requests</h2>
+                <button class="btn ghost icon" id="closeRequestsBtn" data-testid="button-close-requests">×</button>
+            </div>
+            <div class="requests-body" id="requestsBody">
+                <!-- Requests will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Include authentication and page scripts -->
+    <script src="../../js/auth.js"></script>
+    <script src="explorePage.js"></script>
+</body>
+</html>

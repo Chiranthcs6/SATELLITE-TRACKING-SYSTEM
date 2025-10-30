@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Tracking System - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Main login container -->
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Header section -->
+            <div class="card-header">
+                <h1 class="title">Satellite Tracking System</h1>
+                <p class="subtitle">Mission Control Access</p>
+            </div>
+            
+            <!-- Tab navigation -->
+            <div class="card-content">
+                <div class="tabs-list">
+                    <button class="tab-trigger active" data-tab="user" data-testid="tab-user">
+                        User Login
+                    </button>
+                    <button class="tab-trigger" data-tab="admin" data-testid="tab-admin">
+                        Admin Login
+                    </button>
+                    <button class="tab-trigger" data-tab="signup" data-testid="tab-signup">
+                        Sign Up
+                    </button>
+                </div>
+
+                <!-- User Login Form -->
+                <div class="tab-content active" data-content="user">
+                    <form id="userLoginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="user-username">Username</label>
+                            <input 
+                                type="text" 
+                                id="user-username" 
+                                name="username"
+                                placeholder="Enter username" 
+                                required
+                                data-testid="input-user-username"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-password">Password</label>
+                            <input 
+                                type="password" 
+                                id="user-password" 
+                                name="password"
+                                placeholder="Enter password" 
+                                required
+                                data-testid="input-user-password"
+                            >
+                        </div>
+                        
+                        <button type="submit" class="btn primary full-width" data-testid="button-user-login">
+                            Login as User
+                        </button>
+                        
+                        <p class="login-hint">Hint: username: demo, password: demo123</p>
+                    </form>
+                </div>
+
+                <!-- Admin Login Form -->
+                <div class="tab-content" data-content="admin">
+                    <form id="adminLoginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="admin-username">Admin Username</label>
+                            <input 
+                                type="text" 
+                                id="admin-username" 
+                                name="username"
+                                placeholder="Enter admin username" 
+                                required
+                                data-testid="input-admin-username"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-password">Admin Password</label>
+                            <input 
+                                type="password" 
+                                id="admin-password" 
+                                name="password"
+                                placeholder="Enter admin password" 
+                                required
+                                data-testid="input-admin-password"
+                            >
+                        </div>
+                        
+                        <button type="submit" class="btn primary full-width" data-testid="button-admin-login">
+                            Login as Admin
+                        </button>
+                        
+                        <p class="login-hint">Hint: username: admin, password: admin123</p>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="tab-content" data-content="signup">
+                    <form id="signupForm" class="login-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="signup-firstname">First Name</label>
+                                <input 
+                                    type="text" 
+                                    id="signup-firstname" 
+                                    name="firstname"
+                                    placeholder="First name" 
+                                    required
+                                    data-testid="input-signup-firstname"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="signup-lastname">Last Name</label>
+                                <input 
+                                    type="text" 
+                                    id="signup-lastname" 
+                                    name="lastname"
+                                    placeholder="Last name" 
+                                    required
+                                    data-testid="input-signup-lastname"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-username">Username</label>
+                            <input 
+                                type="text" 
+                                id="signup-username" 
+                                name="username"
+                                placeholder="Choose a username" 
+                                required
+                                data-testid="input-signup-username"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input 
+                                type="email" 
+                                id="signup-email" 
+                                name="email"
+                                placeholder="your.email@example.com" 
+                                required
+                                data-testid="input-signup-email"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input 
+                                type="password" 
+                                id="signup-password" 
+                                name="password"
+                                placeholder="Create a password" 
+                                required
+                                data-testid="input-signup-password"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input 
+                                type="password" 
+                                id="signup-confirm-password" 
+                                name="confirmPassword"
+                                placeholder="Confirm your password" 
+                                required
+                                data-testid="input-signup-confirm-password"
+                            >
+                        </div>
+                        
+                        <button type="submit" class="btn primary full-width" data-testid="button-signup">
+                            Create Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include authentication script -->
+   <script src="js/auth.js"></script>
+</body>
+</html>
