@@ -19,7 +19,7 @@ const sampleSatellites = [
         status: 'active',
         altitude: '408 km',
         country: 'International',
-        nextPass: '2025-10-31 16:21 IST'
+        nextPass: '2025-10-31 16:21 UTC'
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ const sampleSatellites = [
         status: 'active',
         altitude: '540 km',
         country: 'USA',
-        nextPass: '2025-10-31 14:29 IST'
+        nextPass: '2025-10-31 14:29 UTC'
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ const sampleSatellites = [
         status: 'active',
         altitude: '705 km',
         country: 'USA',
-        nextPass: '2025-10-31 11:15 IST'
+        nextPass: '2025-10-31 11:15 UTC'
     },
     {
         id: 4,
@@ -49,7 +49,7 @@ const sampleSatellites = [
         status: 'active',
         altitude: '35786 km',
         country: 'USA',
-        nextPass: '2025-10-31 15:00 IST'
+        nextPass: '2025-10-31 15:00 UTC'
     },
         {
         id: 5,
@@ -59,7 +59,7 @@ const sampleSatellites = [
         status: 'active',
         altitude: '35786 km',
         country: 'USA',
-        nextPass: '2025-10-31 15:45 IST'
+        nextPass: '2025-10-31 15:45 UTC'
     }
 ];
 
@@ -188,7 +188,7 @@ let userRequests = [
         username: 'demo',
         satelliteName: 'ISS',
         satelliteId: 1,
-        passTime: '2025-10-08 14:30 IST',
+        passTime: '2025-10-08 14:30 UTC',
         duration: '5 minutes',
         status: 'pending'
     },
@@ -197,7 +197,7 @@ let userRequests = [
         username: 'john_doe',
         satelliteName: 'Meteor M 2-3',
         satelliteId: 2,
-        passTime: '2025-10-09 09:15 IST',
+        passTime: '2025-10-09 09:15 UTC',
         duration: '7 minutes',
         status: 'pending'
     },
@@ -206,7 +206,7 @@ let userRequests = [
         username: 'jane_smith',
         satelliteName: 'Metop C',
         satelliteId: 3,
-        passTime: '2025-10-10 15:45 IST',
+        passTime: '2025-10-10 15:45 UTC',
         duration: '4 minutes',
         status: 'pending'
     }
